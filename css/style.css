@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Siemreap&display=swap');
+
+.font-header{
+    font-family: "Balsamiq Sans", sans-serif !important;
+    /* font-weight: 500 !important; */
+}
+
+.font-text{
+    font-family: "Quicksand", sans-serif !important;
+    font-weight: 350 !important;
+}
+
+body{
+    background: url(../assets/GIF.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* bg custom to make image bg not too much bright */
+body > .bg-custom{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.301);
+}
+ 
+.top-card-service{
+  width: 100%;
+  height: 100%;
+  transition: 0.2s ease-in-out;
+  /* background-color: black; */
+}
+.bot-card-service{
+  width: 100%;
+  height: 50%;
+  /* background-color: green; */
+}
+.card-service:hover .top-card-service{
+  height: 50%;
+}
+
+/* customize */
+.cart-text{
+  border-radius: 50%;
+  background-color: #070707a4;
+  transition: 0.3s ease-in-out !important;
+}
+.cart-portfolio:hover .cart-text{
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 0 !important;
+}
+
+input::placeholder,textarea::placeholder{
+  color: rgb(205, 203, 203) !important;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  --light: #d8dbe0;
+  --dark: #28292c;
+  --link: rgb(27, 129, 112);
+  --link-hover: rgb(24, 94, 82);
+}
+
+.switch-label {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background-color: var(--dark);
+  border-radius: 25px;
+  cursor: pointer;
+  border: 3px solid var(--dark);
+}
+
+.checkbox {
+  position: absolute;
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider {
+  background-color: var(--light);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 12px -4px 0px 0px var(--light);
+  box-shadow: inset 12px -4px 0px 0px var(--light);
+  background-color: var(--dark);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider::before {
+  -webkit-transform: translateX(50px);
+  -ms-transform: translateX(50px);
+  transform: translateX(50px);
+  background-color: var(--dark);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
